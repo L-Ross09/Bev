@@ -1,0 +1,48 @@
+body{
+    font-family: monospace;
+  }
+  
+  h2{
+    color: white;
+  }
+  .likeButtons{
+    width: 70%;
+  
+  }
+  .outputBox{
+    min-height: 100px;
+    width: 70%;
+    background-color:lightblue;
+  }
+  .colContainer{
+      display: flex;
+      flex: flex-wrap;
+      width: 70%;
+  }
+  .col1{
+    flex: 50%;
+    padding: 10px;
+  }
+  
+  button{
+    background-color: lightblue;
+    padding: 12px;
+    font-family: monospace;
+    border: none;
+  }
+  
+  header{
+    background: lightblue;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  input{
+    padding: 10px;
+    font-family: monospace;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
