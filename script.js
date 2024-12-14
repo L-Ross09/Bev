@@ -9,15 +9,20 @@ var carbs = getColumn(url, 7)
 var sugar = getColumn(url, 8)
 
 
-function results(input1, input2){
+function results(input1, input2, input3){
 
     var macthingDrinks = [];
  
     for(var i = 0; i <names.length; i++){
-        if (type[i] == input1 && sugarFree[i] == input2){
+        if (type[i] == input1 && sugarFree[i] == input2 && input3){
             macthingDrinks.push(names[i])
         }
-    }
+    } 
     console.log(macthingDrinks)
+    document.getElementById("output").innerHTML = macthingDrinks + "br";
+
 }
 
+function showCalories(){
+    document.getElementById("sliderValue").innerHTML = document.getElementById("calories").value;
+}
