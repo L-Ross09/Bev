@@ -9,6 +9,7 @@
   
 </head>
 
+
 <body>
 	<center>
 		<header>Beverage shop</header>
@@ -17,7 +18,7 @@
             <option value="Juice">Juice</option>
             <option value="Milk">Milk</option>
             <option value="Tea">Tea</option>
-            <option value="Cofee">Cofee</option>
+            <option value="Coffee">Coffee</option>
             <option value="Soda">Soda</option>
             <option value="Energy Drink">Energy Drink</option>
             <option value="Other">Other</option>
@@ -35,19 +36,21 @@
         </br>
         <label>Calories </label>
          <br>
-          <input onChange="maker()" type="range" min="10" max="60" value="25" class="slider" id="size">
-           <p>78</p>
+
+          <input oninput="showCalories()" type="range" min="10" max="460" value="25" class="slider" id="calories">
+           <p id = "sliderValue">0</p>
+           <button onclick = "results(document.getElementById('Type').value,  document.getElementById('Sugar Free').value,  document.getElementById('calories').value)";>get result</button>
+
 
 		<div class="outputBox" id="outputBox">
-			<p id="output"> </p>
+			<p id="output"></p>
 		</div>
 
 		
 
 
 <br>
-  <button onclick = "results(document.getElementById('Type').value,  document.getElementById('Sugar Free').value)";>get result</button>
-
+  
  
 
   <p id="feedback"> </p>
