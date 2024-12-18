@@ -1,73 +1,65 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>replit</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ole&family=Playwrite+NL+Guides&display=swap" rel="stylesheet">
-    
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
 
-
-<body>
-	<center>
-		 <!-- This is the site header -->
-		<header>Beverage shop</header>
-		 <!-- This is the title of the dropdown menu -->
+  <body>
+  <div class="row">
+      <div class="column" style="background-color:#10d9d6;">
+        <h2>Beverage shop</h2>
+  
         <label>Type: </label>
-		 <!-- This is the dropdown menu that you see on the screen, 
-         currently it starts at the juice type of drink -->
-        <select  onChange="maker()" id="Type" >
-            <option value="Juice">Juice</option>
-            <option value="Milk">Milk</option>
-            <option value="Tea">Tea</option>
-            <option value="Coffee">Coffee</option>
-            <option value="Soda">Soda</option>
-            <option value="Energy Drink">Energy Drink</option>
-            <option value="Other">Other</option>
-           
-            
-        
-          </select>
-		<!-- This is the other dropdown menu which
-            controls if you want a sugar free option or not -->
-          <label>Sugar Free? </label>
-          <select   onChange="maker()" id="Sugar Free" >
-            <option value="TRUE">TRUE </option>
-            <option value="FALSE">FALSE</option>
-          </select>
-          
-          <br>
-        </br>
+        <select id="Type" >
+          <option value="Juice">Juice</option>
+          <option value="Milk">Milk</option>
+          <option value="Tea">Tea</option>
+          <option value="Coffee">Coffee</option>
+          <option value="Soda">Soda</option>
+          <option value="Energy Drink">Energy Drink</option>
+          <option value="Other">Other</option>
+        </select>
+        <br>
+
+        <label>Sugar Free? </label>
+        <select id="Sugar Free" >
+          <option value="TRUE">Yes </option>
+          <option value="FALSE">No</option>
+        </select>
+   
         <label>Calories </label>
-         <br>
-         <!-- The Lowest amount of calories in a drink/Beverage is 10 calories and the hightest is 460 -->
-          <input oninput="showCalories()" type="range" min="10" max="460" value="25" class="slider" id="calories">
-		 <!-- This is the number which connects to the slider to change the amount of calories -->
-           <p id = "sliderValue">25</p>
-           <button onclick = "results(document.getElementById('Type').value,  document.getElementById('Sugar Free').value,  document.getElementById('calories').value)";>get result</button>
+        <br>
+        <input oninput="showCalories()" type="range" min="10" max="460" value="25" class="slider" id="calories">
+        <p id = "sliderValue">0</p>
+        <button onclick = "results(document.getElementById('Type').value,  document.getElementById('Sugar Free').value,  document.getElementById('calories').value);">get result</button>
+      <!-- closes the first column -->
+      </div>
 
-
-		<div class="outputBox" id="outputBox">
-			<p id="output"></p>
-		</div>
-
-		
-
-
-<br>
+        
+      <div class="column" style="background-color:#d43deb;">
+        <div class="outputBox" id="outputBox">
+            <p id="output"></p>
+        </div>
+      </div>
+    
+    <!-- closes the entire row -->
+    </div>
+       
   
- 
-
-  <p id="feedback"> </p>
-    </center>
-    <script src="utils.js"></script>
-    <script src="script.js"></script>
-  
- 
+      
+        <script src="utils.js"></script>
+        <script src="script.js"></script>
+      
+     
   </body>
 </html>
+    
+     
+ 
+
